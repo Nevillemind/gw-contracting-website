@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="G&W Contracting Services LLC project portfolio — masonry, concrete, stonework, and hardscape work in Richmond, Virginia.">
+  <title>Our Work | G&W Contracting Services LLC</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 0 48px;
+    }
+
+    .filter-btn {
+      background: var(--charcoal);
+      border: 1px solid var(--border);
+      color: #ccc;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .gallery-grid-large {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item-large {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      background: var(--stone);
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+
+    .gallery-item-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .gallery-item-large:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      padding: 32px 20px 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item-large:hover .gallery-overlay-info {
+      transform: translateY(0);
+    }
+
+    .gallery-overlay-info h4 {
+      font-size: 15px;
+      color: white;
+      font-family: 'Arial Black', sans-serif;
+      margin-bottom: 4px;
+    }
+
+    .gallery-overlay-info span {
+      font-size: 12px;
+      color: var(--gold);
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--accent);
+      color: white;
+      font-size: 10px;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-grid-large { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid-large { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">G&W</div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">G&W CONTRACTING</span>
+        <span class="nav-logo-sub">Services LLC · Richmond, VA</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Who We Are</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html" class="active">Our Work</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">Who We Are</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Our Work</a>
+  <a href="contact.html">Get a Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section style="padding: 160px 24px 80px; background: var(--charcoal); text-align:center; border-bottom: 2px solid var(--accent);">
+  <div class="section-label">Portfolio</div>
+  <h1 style="font-size: clamp(36px, 5vw, 64px); color: var(--white); margin-bottom: 16px;">Our Work</h1>
+  <p style="max-width:600px; margin:0 auto; font-size:18px; color:#c0bdb8;">Every project is a reflection of the G&W standard — built with precision, pride, and care.</p>
+</section>
+
+<!-- GALLERY -->
+<section class="section" style="background: var(--dark);">
+  <div class="section-inner">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Projects</button>
+      <button class="filter-btn" onclick="filterGallery('masonry', this)">Brick & Block</button>
+      <button class="filter-btn" onclick="filterGallery('concrete', this)">Concrete</button>
+      <button class="filter-btn" onclick="filterGallery('stone', this)">Stonework</button>
+      <button class="filter-btn" onclick="filterGallery('hardscape', this)">Hardscapes</button>
+      <button class="filter-btn" onclick="filterGallery('commercial', this)">Commercial</button>
+    </div>
+
+    <div class="gallery-grid-large" id="galleryGrid">
+
+      <!-- PHOTO PLACEHOLDERS — Replace src with real photo paths when available -->
+      <!-- To add photos: copy images to the /images/ folder, then update src="images/your-photo.jpg" -->
+
+      <div class="gallery-item-large" data-cat="masonry">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🧱</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Brick & Block</div>
+        <div class="gallery-overlay-info">
+          <h4>Residential Brick Wall</h4>
+          <span>Masonry · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🏗️</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Driveway & Apron</h4>
+          <span>Concrete · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🪨</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Custom Stone Feature</h4>
+          <span>Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🌿</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Patio</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="commercial">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🏢</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Commercial</div>
+        <div class="gallery-overlay-info">
+          <h4>Commercial Build</h4>
+          <span>Commercial · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="masonry">
+        <div class="gallery-placeholder" style="height:100%;">
+          <span style="font-size:40px;">🧱</span>
+          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+        </div>
+        <div class="gallery-tag">Brick & Block</div>
+        <div class="gallery-overlay-info">
+          <h4>Block Foundation</h4>
+          <span>Masonry · Richmond, VA</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:48px; color: var(--text-muted); font-family:'Arial',sans-serif; font-size:14px;">
+      📸 Photos of completed projects will be added as they become available. Check back soon!
+    </p>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">✕</span>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Like What You See?</h2>
+  <p>Let's talk about bringing this level of craftsmanship to your project.</p>
+  <a href="contact.html" class="btn btn-white">Get a Free Quote</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">G&W</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">G&W CONTRACTING</span>
+            <span class="nav-logo-sub">Services LLC</span>
+          </div>
+        </div>
+        <p>Class A Licensed Contractor serving Richmond & Central Virginia · Atlanta, GA Metro & Surrounding Counties.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8046408880">📞 (804) 640-8880</a></li>
+          <li><a href="mailto:gwcontractingservices@gmail.com">✉️ gwcontractingservices@gmail.com</a></li>
+          <li><a href="contact.html">📍 Richmond, VA · Atlanta, GA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 G&W Contracting Services LLC · All Rights Reserved · Richmond, VA · Atlanta, GA</p>
+      <span class="footer-license">Class A Licensed Contractor · Virginia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item-large').forEach(item => {
+    if (cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+document.querySelectorAll('.gallery-item-large').forEach(item => {
+  item.addEventListener('click', function() {
+    const img = this.querySelector('img');
+    if (img) {
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+  });
+});
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+</script>
+</body>
+</html>

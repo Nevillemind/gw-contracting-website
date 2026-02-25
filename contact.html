@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact G&W Contracting Services LLC for a free quote on masonry, concrete, stonework, and hardscape projects in Richmond & Central Virginia and Atlanta Metro, GA.">
+  <title>Get a Quote | G&W Contracting Services LLC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">G&W</div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-main">G&W CONTRACTING</span>
+        <span class="nav-logo-sub">Services LLC · Richmond, VA</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Who We Are</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="work.html">Our Work</a></li>
+      <li><a href="contact.html" class="active nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">Who We Are</a>
+  <a href="services.html">Services</a>
+  <a href="work.html">Our Work</a>
+  <a href="contact.html">Get a Quote</a>
+</div>
+
+<!-- PAGE HERO -->
+<section style="padding: 160px 24px 80px; background: var(--charcoal); text-align:center; border-bottom: 2px solid var(--accent);">
+  <div class="section-label">Let's Talk</div>
+  <h1 style="font-size: clamp(36px, 5vw, 64px); color: var(--white); margin-bottom: 16px;">Get a Free Quote</h1>
+  <p style="max-width:600px; margin:0 auto; font-size:18px; color:#c0bdb8;">Tell us about your project. We'll reach out fast — usually within one business day.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <h3>Reach Out Directly</h3>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <h4>Phone</h4>
+            <p>
+              <a href="tel:8046408880">(804) 640-8880</a> — Richmond, VA<br>
+              <a href="tel:7575856101">(757) 585-6101</a> — Atlanta, GA
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p><a href="mailto:gwcontractingservices@gmail.com">gwcontractingservices@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <h4>Service Area</h4>
+            <p>Richmond & Central Virginia · Atlanta Metro & Surrounding Counties</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-text">
+            <h4>Hours</h4>
+            <p>Mon–Fri: 7:00 AM – 5:00 PM<br>Saturday: By appointment</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 28px; background: var(--stone); border-radius: 4px; border-left: 3px solid var(--accent);">
+          <p style="font-size: 15px; color: #d0cdc8; margin:0;">
+            <strong style="color: var(--white);">Free Estimates:</strong> We come to your site, assess the project, and give you a clear, honest quote — no pressure, no hidden fees.
+          </p>
+        </div>
+
+        <div style="margin-top: 24px; padding: 20px; background: var(--stone); border-radius: 4px;">
+          <p style="font-size: 13px; text-align:center; margin:0;">
+            <span style="color: var(--gold); font-weight: bold; font-family: 'Arial', sans-serif; letter-spacing: 1px; text-transform: uppercase;">✓ Class A Licensed · ✓ Insured · ✓ Virginia Certified</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form">
+        <h3>Tell Us About Your Project</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="George" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(804) 555-0100" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="brick-masonry">Brick & Block Masonry</option>
+              <option value="concrete">Concrete Work</option>
+              <option value="stonework">Custom Stonework</option>
+              <option value="hardscape">Hardscapes & Patios</option>
+              <option value="home-buildout">Full Home Build-Out</option>
+              <option value="commercial">Commercial Project</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Project Address / Location</label>
+            <input type="text" id="address" name="address" placeholder="Richmond, VA or nearby city">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Description *</label>
+            <textarea id="message" name="message" placeholder="Describe your project — what you need done, approximate size, timeline, and any other details..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-full">Send My Request →</button>
+          </div>
+
+          <p style="text-align:center; margin-top:16px; font-size:13px; color:#777;">
+            We respond within 1 business day. Your info is never shared.
+          </p>
+        </form>
+
+        <div id="formSuccess" style="display:none; text-align:center; padding: 40px 20px;">
+          <div style="font-size:48px; margin-bottom:16px;">✅</div>
+          <h3 style="color: var(--white); margin-bottom:12px;">Message Received!</h3>
+          <p>Thanks for reaching out. We'll be in touch within 1 business day to discuss your project.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">G&W</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">G&W CONTRACTING</span>
+            <span class="nav-logo-sub">Services LLC</span>
+          </div>
+        </div>
+        <p>Class A Licensed Contractor serving Richmond & Central Virginia · Atlanta, GA Metro & Surrounding Counties.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8046408880">📞 (804) 640-8880</a></li>
+          <li><a href="mailto:gwcontractingservices@gmail.com">✉️ gwcontractingservices@gmail.com</a></li>
+          <li><a href="contact.html">📍 Richmond, VA · Atlanta, GA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 G&W Contracting Services LLC · All Rights Reserved · Richmond, VA · Atlanta, GA</p>
+      <span class="footer-license">Class A Licensed Contractor · Virginia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  // Form submission — will connect to backend/email service when deployed
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+</body>
+</html>
