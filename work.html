@@ -122,11 +122,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">G&W</div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-main">G&W CONTRACTING</span>
-        <span class="nav-logo-sub">Services LLC · Richmond, VA</span>
-      </div>
+      <img src="images/gw-logo.jpg" alt="G&W Contracting Services LLC" style="height: 52px; width: auto; border-radius: 3px;">
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -170,86 +166,295 @@
 
     <div class="gallery-grid-large" id="galleryGrid">
 
-      <!-- PHOTO PLACEHOLDERS — Replace src with real photo paths when available -->
-      <!-- To add photos: copy images to the /images/ folder, then update src="images/your-photo.jpg" -->
-
-      <div class="gallery-item-large" data-cat="masonry">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🧱</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
-        </div>
-        <div class="gallery-tag">Brick & Block</div>
-        <div class="gallery-overlay-info">
-          <h4>Residential Brick Wall</h4>
-          <span>Masonry · Richmond, VA</span>
-        </div>
-      </div>
-
-      <div class="gallery-item-large" data-cat="concrete">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🏗️</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
-        </div>
-        <div class="gallery-tag">Concrete</div>
-        <div class="gallery-overlay-info">
-          <h4>Driveway & Apron</h4>
-          <span>Concrete · Richmond, VA</span>
-        </div>
-      </div>
-
-      <div class="gallery-item-large" data-cat="stone">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🪨</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
-        </div>
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-1.jpg')">
+        <img src="images/project-1.jpg" alt="Custom Stone Retaining Walls">
         <div class="gallery-tag">Stonework</div>
         <div class="gallery-overlay-info">
-          <h4>Custom Stone Feature</h4>
+          <h4>Custom Stone Retaining Walls</h4>
+          <span>Stone · Hardscape · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-2.jpg')">
+        <img src="images/project-2.jpg" alt="Flagstone Patio with Fire Pit">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Flagstone Patio & Fire Pit</h4>
+          <span>Hardscape · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-3.jpg')">
+        <img src="images/project-3.jpg" alt="Custom Outdoor Stone Fireplace">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Custom Outdoor Stone Fireplace</h4>
           <span>Stone · Richmond, VA</span>
         </div>
       </div>
 
-      <div class="gallery-item-large" data-cat="hardscape">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🌿</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-4.jpg')">
+        <img src="images/project-4.jpg" alt="Stone Porch & Steps — New Construction">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Stone Porch & Steps</h4>
+          <span>Stone · New Construction · Richmond, VA</span>
         </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-5.jpg')">
+        <img src="images/project-5.jpg" alt="Floor-to-Ceiling Interior Stone Fireplace">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Floor-to-Ceiling Stone Fireplace</h4>
+          <span>Interior Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="commercial" onclick="openLightbox('images/project-6.jpg')">
+        <img src="images/project-6.jpg" alt="Commercial Brick Building — Full Build">
+        <div class="gallery-tag">Commercial</div>
+        <div class="gallery-overlay-info">
+          <h4>Commercial Brick Building</h4>
+          <span>Commercial · Full Build · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="masonry" onclick="openLightbox('images/project-7.jpg')">
+        <img src="images/project-7.jpg" alt="Commercial Brick Masonry Wall">
+        <div class="gallery-tag">Brick & Block</div>
+        <div class="gallery-overlay-info">
+          <h4>Commercial Brick Masonry</h4>
+          <span>Brick · Block · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-8.jpg')">
+        <img src="images/project-8.jpg" alt="Curved Concrete Patio — Under Construction">
         <div class="gallery-tag">Hardscape</div>
         <div class="gallery-overlay-info">
-          <h4>Paver Patio</h4>
+          <h4>Curved Patio — During Build</h4>
+          <span>Concrete · Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-9.jpg')">
+        <img src="images/project-9.jpg" alt="Stamped Concrete Patio — Completed">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Stamped Concrete Patio — Completed</h4>
+          <span>Concrete · Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-10.jpg')">
+        <img src="images/project-10.jpg" alt="Paver Patio — Base Prep">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Patio — Base Prep</h4>
           <span>Hardscape · Richmond, VA</span>
         </div>
       </div>
 
-      <div class="gallery-item-large" data-cat="commercial">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🏢</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
-        </div>
-        <div class="gallery-tag">Commercial</div>
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-11.jpg')">
+        <img src="images/project-11.jpg" alt="Paver Patio — Installation in Progress">
+        <div class="gallery-tag">Hardscape</div>
         <div class="gallery-overlay-info">
-          <h4>Commercial Build</h4>
-          <span>Commercial · Richmond, VA</span>
+          <h4>Paver Patio — Installation</h4>
+          <span>Hardscape · Richmond, VA</span>
         </div>
       </div>
 
-      <div class="gallery-item-large" data-cat="masonry">
-        <div class="gallery-placeholder" style="height:100%;">
-          <span style="font-size:40px;">🧱</span>
-          <span style="font-family:'Arial';font-size:13px;color:#999;letter-spacing:1px;">Photo Coming Soon</span>
-        </div>
-        <div class="gallery-tag">Brick & Block</div>
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-12.jpg')">
+        <img src="images/project-12.jpg" alt="Paver Patio with Steps & Retaining Wall">
+        <div class="gallery-tag">Hardscape</div>
         <div class="gallery-overlay-info">
-          <h4>Block Foundation</h4>
-          <span>Masonry · Richmond, VA</span>
+          <h4>Paver Patio with Steps & Wall</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-13.jpg')">
+        <img src="images/project-13.jpg" alt="Completed Paver Patio with Block Seating Wall">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Patio — Completed</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-14.jpg')">
+        <img src="images/project-14.jpg" alt="Front Porch — Before Flagstone">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Front Porch Flagstone — Before</h4>
+          <span>Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-15.jpg')">
+        <img src="images/project-15.jpg" alt="Front Porch Flagstone — Installation">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Front Porch Flagstone — Install</h4>
+          <span>Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-16.jpg')">
+        <img src="images/project-16.jpg" alt="Front Porch Flagstone — Completed Full View">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Front Porch Flagstone — Completed</h4>
+          <span>Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="stone" onclick="openLightbox('images/project-17.jpg')">
+        <img src="images/project-17.jpg" alt="Front Porch Flagstone — Side View">
+        <div class="gallery-tag">Stonework</div>
+        <div class="gallery-overlay-info">
+          <h4>Front Porch Flagstone — Side View</h4>
+          <span>Stone · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-18.jpg')">
+        <img src="images/project-18.jpg" alt="Paver Walkway — Installation Start">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Walkway — Installation</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-19.jpg')">
+        <img src="images/project-19.jpg" alt="Paver Walkway — Laying Pavers">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Walkway — In Progress</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-20.jpg')">
+        <img src="images/project-20.jpg" alt="Paver Walkway — Completed Side View">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Walkway — Completed</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-21.jpg')">
+        <img src="images/project-21.jpg" alt="Paver Walkway — Full View Completed">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Walkway — Full View</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete" onclick="openLightbox('images/project-22.jpg')">
+        <img src="images/project-22.jpg" alt="Garage Concrete Floor — Before">
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Garage Concrete Floor — Before</h4>
+          <span>Concrete · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete" onclick="openLightbox('images/project-23.jpg')">
+        <img src="images/project-23.jpg" alt="Garage Concrete Floor — Pour in Progress">
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Garage Concrete Floor — Pour</h4>
+          <span>Concrete · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete" onclick="openLightbox('images/project-24.jpg')">
+        <img src="images/project-24.jpg" alt="Garage Concrete Floor — Completed">
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Garage Concrete Floor — Completed</h4>
+          <span>Concrete · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-25.jpg')">
+        <img src="images/project-25.jpg" alt="Curved Paver Patio — In Progress">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Curved Paver Patio — In Progress</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-26.jpg')">
+        <img src="images/project-26.jpg" alt="Curved Paver Patio — Completed">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Curved Paver Patio — Completed</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-27.jpg')">
+        <img src="images/project-27.jpg" alt="Curved Paver Patio — Side View">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Curved Paver Patio — Side View</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete" onclick="openLightbox('images/project-28.jpg')">
+        <img src="images/project-28.jpg" alt="Acid Stained Concrete Patio — Application">
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Acid Stained Concrete — Application</h4>
+          <span>Concrete · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="concrete" onclick="openLightbox('images/project-29.jpg')">
+        <img src="images/project-29.jpg" alt="Acid Stained Concrete Patio — Completed">
+        <div class="gallery-tag">Concrete</div>
+        <div class="gallery-overlay-info">
+          <h4>Acid Stained Concrete — Completed</h4>
+          <span>Concrete · Atlanta, GA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-30.jpg')">
+        <img src="images/project-30.jpg" alt="Paver Patio with Block Border — Base">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Patio with Block Border — Base</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-31.jpg')">
+        <img src="images/project-31.jpg" alt="Paver Patio with Block Border — Completed">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Paver Patio with Block Border</h4>
+          <span>Hardscape · Richmond, VA</span>
+        </div>
+      </div>
+
+      <div class="gallery-item-large" data-cat="hardscape" onclick="openLightbox('images/project-32.jpg')">
+        <img src="images/project-32.jpg" alt="Custom Pergola & Paver Patio — Outdoor Living">
+        <div class="gallery-tag">Hardscape</div>
+        <div class="gallery-overlay-info">
+          <h4>Custom Pergola & Paver Patio</h4>
+          <span>Outdoor Living · Richmond, VA</span>
         </div>
       </div>
 
     </div>
-
-    <p style="text-align:center; margin-top:48px; color: var(--text-muted); font-family:'Arial',sans-serif; font-size:14px;">
-      📸 Photos of completed projects will be added as they become available. Check back soon!
-    </p>
   </div>
 </section>
 
@@ -271,11 +476,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="nav-logo">
-          <div class="nav-logo-icon">G&W</div>
-          <div class="nav-logo-text">
-            <span class="nav-logo-main">G&W CONTRACTING</span>
-            <span class="nav-logo-sub">Services LLC</span>
-          </div>
+          <img src="images/gw-logo.jpg" alt="G&W Contracting Services LLC" style="height: 52px; width: auto; border-radius: 3px;">
         </div>
         <p>Class A Licensed Contractor serving Richmond & Central Virginia · Atlanta, GA Metro & Surrounding Counties.</p>
       </div>
@@ -300,6 +501,7 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 G&W Contracting Services LLC · All Rights Reserved · Richmond, VA · Atlanta, GA</p>
+      <div class="footer-payment">&#8383; We Accept Bitcoin</div>
       <span class="footer-license">Class A Licensed Contractor · Virginia</span>
     </div>
   </div>

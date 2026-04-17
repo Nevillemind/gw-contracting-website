@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { size: letter; margin: 0.75in 0.85in 0.75in 0.85in; }
+:root {
+  --green: #7ab040;
+  --dark: #2a2a2a;
+  --mid: #444;
+  --light: #f7f7f7;
+  --border: #d0d0d0;
+  --gold: #C8952A;
+}
+body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 10pt; line-height: 1.6; color: var(--dark); }
+
+/* HEADER */
+.contract-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid var(--green); padding-bottom: 16px; margin-bottom: 24px; }
+.logo-block h1 { font-size: 22pt; font-weight: 900; color: var(--green); margin: 0; letter-spacing: -0.5px; }
+.logo-block .tagline { font-size: 8.5pt; color: var(--mid); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+.contact-block { text-align: right; font-size: 8.5pt; color: var(--mid); line-height: 1.7; }
+.contact-block strong { color: var(--dark); }
+
+/* CONTRACT TITLE */
+.contract-title { text-align: center; margin: 0 0 24px 0; }
+.contract-title h2 { font-size: 14pt; font-weight: 700; color: var(--dark); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 4px 0; }
+.contract-title .contract-num { font-size: 9pt; color: var(--mid); }
+
+/* LICENSE BADGE */
+.license-bar { background: var(--light); border: 1px solid var(--border); border-left: 4px solid var(--green); padding: 8px 14px; font-size: 8.5pt; color: var(--mid); margin-bottom: 20px; border-radius: 0 4px 4px 0; }
+.license-bar strong { color: var(--dark); }
+
+/* SECTION HEADERS */
+h3 { font-size: 10.5pt; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); padding-bottom: 4px; margin: 24px 0 10px 0; page-break-after: avoid; }
+
+/* FIELD ROWS */
+.field-row { display: flex; gap: 20px; margin-bottom: 10px; }
+.field { flex: 1; }
+.field label { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; color: var(--mid); letter-spacing: 0.8px; display: block; margin-bottom: 2px; }
+.field-line { border-bottom: 1px solid var(--dark); min-height: 18px; padding-bottom: 2px; font-size: 9.5pt; }
+.field-line.fill { color: #999; font-style: italic; }
+
+/* SCOPE TABLE */
+.scope-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px 0; font-size: 9.5pt; }
+.scope-table th { background: var(--green); color: #fff; padding: 7px 10px; text-align: left; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.5px; }
+.scope-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.scope-table tr:nth-child(even) td { background: var(--light); }
+.scope-table .empty-row td { height: 24px; }
+
+/* PAYMENT TABLE */
+.payment-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px 0; font-size: 9.5pt; }
+.payment-table th { background: var(--dark); color: #fff; padding: 7px 10px; text-align: left; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.5px; }
+.payment-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); }
+.payment-table .total-row td { font-weight: 700; font-size: 10.5pt; background: var(--light); border-top: 2px solid var(--dark); }
+.amount-col { text-align: right; width: 120px; }
+
+/* HIGHLIGHT BOXES */
+.notice-box { background: #FFF8E1; border-left: 4px solid #E65100; padding: 10px 14px; margin: 12px 0; font-size: 9pt; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+.info-box { background: #EEF7E4; border-left: 4px solid var(--green); padding: 10px 14px; margin: 12px 0; font-size: 9pt; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+
+/* LEGAL CLAUSES */
+.clause { margin-bottom: 12px; font-size: 9.5pt; }
+.clause strong { color: var(--dark); }
+ol.clauses { padding-left: 18px; }
+ol.clauses li { margin-bottom: 10px; font-size: 9.5pt; }
+
+/* SIGNATURE BLOCK */
+.sig-section { margin-top: 28px; page-break-inside: avoid; }
+.sig-grid { display: flex; gap: 40px; margin-top: 16px; }
+.sig-col { flex: 1; }
+.sig-col label { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; color: var(--mid); letter-spacing: 0.8px; display: block; margin-bottom: 20px; }
+.sig-line { border-bottom: 1.5px solid var(--dark); margin-bottom: 4px; min-height: 28px; }
+.sig-sub { font-size: 8pt; color: var(--mid); }
+
+/* WARRANTY BADGE */
+.warranty-badge { display: inline-block; background: var(--green); color: #fff; font-size: 8.5pt; font-weight: 700; padding: 4px 12px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+
+/* PAGE BREAK */
+.page-break { page-break-before: always; }
+
+/* FOOTER */
+.doc-footer { text-align: center; font-size: 7.5pt; color: #bbb; margin-top: 28px; padding-top: 10px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="contract-header">
+  <div class="logo-block">
+    <img src="images/gw-logo.jpg" style="max-height:70px;max-width:220px;object-fit:contain;" alt="G&W Contracting Services LLC">
+  </div>
+  <div class="contact-block">
+    <strong>George Mundin</strong><br>
+    Richmond, Virginia · 804-640-8880<br>
+    gwcontractingservices@gmail.com<br>
+    gwcontractingservices.com<br>
+    <strong>License #:</strong> 2705158454
+  </div>
+</div>
+
+<!-- TITLE -->
+<div class="contract-title">
+  <h2>Construction Contract Agreement</h2>
+  <div class="contract-num">Contract No.: _____________ &nbsp;&nbsp;|&nbsp;&nbsp; Date: _____________</div>
+</div>
+
+<!-- LICENSE BAR -->
+<div class="license-bar">
+  <strong>Virginia Class A Contractor License #2705158454</strong> &nbsp;|&nbsp; G &amp; W Contracting Services LLC &nbsp;|&nbsp; Registered with Virginia Department of Professional and Occupational Regulation (DPOR)
+</div>
+
+<!-- PARTIES -->
+<h3>1. Parties to this Agreement</h3>
+<div class="field-row">
+  <div class="field">
+    <label>Contractor (Company)</label>
+    <div class="field-line">G &amp; W Contracting Services LLC</div>
+  </div>
+  <div class="field">
+    <label>License Number</label>
+    <div class="field-line">2705158454</div>
+  </div>
+</div>
+<div class="field-row">
+  <div class="field">
+    <label>Client / Owner (Full Legal Name)</label>
+    <div class="field-line">Kori Jones</div>
+  </div>
+  <div class="field">
+    <label>Phone Number</label>
+    <div class="field-line field fill">&nbsp;</div>
+  </div>
+</div>
+<div class="field-row">
+  <div class="field">
+    <label>Project / Property Address</label>
+    <div class="field-line">1215 North 19th Street, Richmond, VA 23223</div>
+  </div>
+  <div class="field">
+    <label>Email Address</label>
+    <div class="field-line field fill">&nbsp;</div>
+  </div>
+</div>
+
+<!-- SCOPE -->
+<h3>2. Scope of Work</h3>
+<p style="font-size:9pt;margin-bottom:8px;">G &amp; W Contracting Services LLC agrees to perform the following work at the above-referenced property:</p>
+<table class="scope-table">
+  <thead><tr><th style="width:40px;">#</th><th>Description of Work</th><th style="width:120px;">Materials</th><th style="width:80px;">Est. Amount</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Cut open CMU block foundation — 20" x 32" rough opening</td><td>CMU block, steel lintel</td><td>incl.</td></tr>
+    <tr><td>2</td><td>Remove and dispose of CMU block debris</td><td>—</td><td>incl.</td></tr>
+    <tr><td>3</td><td>Install steel lintel as required</td><td>Steel lintel</td><td>incl.</td></tr>
+    <tr><td>4</td><td>Set and secure 20" x 32" access door in opening</td><td>Access door</td><td>incl.</td></tr>
+    <tr><td>5</td><td>Clean work area upon completion</td><td>—</td><td>incl.</td></tr>
+    <tr><td colspan="4" style="font-size:8.5pt;color:#999;font-style:italic;padding:6px 10px;">Additional work not listed above requires a written change order signed by both parties before work begins.</td></tr>
+  </tbody>
+</table>
+
+<!-- PAYMENT -->
+<h3>3. Contract Price &amp; Payment Schedule</h3>
+<table class="payment-table">
+  <thead><tr><th>Payment</th><th>Description</th><th>Due</th><th class="amount-col">Amount</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Deposit (50%)</strong></td>
+      <td>Required before work begins. No work will commence until deposit is received.</td>
+      <td>At signing</td>
+      <td class="amount-col">$390.00</td>
+    </tr>
+    <tr>
+      <td><strong>Progress Payment</strong><br><span style="font-size:8pt;color:#999;">(if applicable)</span></td>
+      <td>Mid-project progress payment, if agreed upon for larger projects.</td>
+      <td>____________</td>
+      <td class="amount-col">$____________</td>
+    </tr>
+    <tr>
+      <td><strong>Final Balance</strong></td>
+      <td>Balance due upon successful completion of all work to Client's satisfaction and before demobilization.</td>
+      <td>Upon completion</td>
+      <td class="amount-col">$390.00</td>
+    </tr>
+    <tr class="total-row">
+      <td colspan="3"><strong>TOTAL CONTRACT PRICE</strong></td>
+      <td class="amount-col"><strong>$780.00</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="notice-box">
+  <strong>⚠️ Payment Terms:</strong> The 50% deposit is non-refundable if Client cancels after materials have been ordered or work has commenced. Final balance is due upon completion and must be paid before G &amp; W Contracting Services LLC vacates the property. Returned checks are subject to a $35 returned check fee. Balances unpaid after 30 days accrue interest at 1.5% per month.
+</div>
+
+<!-- SCHEDULE -->
+<h3>4. Project Schedule</h3>
+<div class="field-row">
+  <div class="field">
+    <label>Estimated Start Date</label>
+    <div class="field-line field fill">&nbsp;</div>
+  </div>
+  <div class="field">
+    <label>Estimated Completion Date</label>
+    <div class="field-line field fill">&nbsp;</div>
+  </div>
+</div>
+<div class="clause" style="margin-top:8px;font-size:9pt;">
+  Schedule is subject to change due to weather conditions, material availability, permit delays, or circumstances beyond the Contractor's reasonable control. Contractor will provide reasonable notice of any schedule changes.
+</div>
+
+<!-- WARRANTY -->
+<h3>5. Warranty</h3>
+<div class="warranty-badge">12-Month Workmanship Warranty</div>
+<div class="info-box">
+  G &amp; W Contracting Services LLC warrants all labor and workmanship against defects for a period of <strong>twelve (12) months</strong> from the date of project completion. This warranty covers defects in workmanship performed by G &amp; W Contracting Services LLC and does not cover: damage caused by Client or third parties; normal wear and tear; acts of God, extreme weather, or natural disasters; or defects in materials supplied by Client. Manufacturer warranties on materials are separate and pass through to Client. To make a warranty claim, Client must provide written notice to G &amp; W Contracting Services LLC within the warranty period.
+</div>
+
+<!-- LEGAL TERMS -->
+<h3 class="page-break">6. General Terms &amp; Conditions</h3>
+
+<ol class="clauses">
+  <li><strong>Permits &amp; Inspections:</strong> Contractor shall obtain all required building permits unless otherwise agreed in writing. Permit fees are included in the contract price unless noted otherwise. Client shall provide reasonable access to the property for inspections.</li>
+
+  <li><strong>Change Orders:</strong> Any changes to the scope of work, materials, or price must be documented in a written Change Order signed by both parties before additional work begins. Verbal agreements for changes are not binding. Change orders may affect the project schedule and total contract price.</li>
+
+  <li><strong>Client Responsibilities:</strong> Client shall provide clear and safe access to the work area; ensure utilities (water, electricity) are available as needed; remove personal property, vehicles, and obstacles from the work area; and not interfere with Contractor's work or workers.</li>
+
+  <li><strong>Materials:</strong> Unless otherwise specified, Contractor shall supply all materials necessary to complete the scope of work. Contractor reserves the right to substitute materials of equal or greater quality if specified materials are unavailable, with notice to Client.</li>
+
+  <li><strong>Insurance:</strong> G &amp; W Contracting Services LLC maintains general liability insurance and workers' compensation coverage as required by Virginia law. Certificates of insurance are available upon request.</li>
+
+  <li><strong>Subcontractors:</strong> Contractor may employ licensed subcontractors to perform portions of the work. Contractor remains responsible for the quality and completion of all subcontracted work.</li>
+
+  <li><strong>Unforeseen Conditions:</strong> If hidden or unforeseen conditions are discovered during the work (including but not limited to: underground utilities, structural issues, mold, lead paint, asbestos, or soil conditions), Contractor will notify Client immediately. Additional costs to address unforeseen conditions will be documented in a written Change Order.</li>
+
+  <li><strong>Delays:</strong> Contractor shall not be liable for delays caused by weather, acts of God, material shortages, labor disputes, government actions, or other circumstances beyond Contractor's reasonable control.</li>
+
+  <li><strong>Liens:</strong> Upon receipt of final payment, Contractor agrees to execute and deliver a Lien Waiver and Release to Client. Client acknowledges that failure to make timely payment may result in a mechanic's lien being filed against the property pursuant to Virginia Code § 43-1 et seq.</li>
+
+  <li><strong>Dispute Resolution:</strong> In the event of a dispute, the parties agree to first attempt resolution through good-faith negotiation. If unresolved, disputes shall be submitted to mediation in Richmond, Virginia before either party may initiate litigation. The prevailing party in any legal action shall be entitled to recover reasonable attorney's fees and costs.</li>
+
+  <li><strong>Governing Law:</strong> This Agreement shall be governed by the laws of the Commonwealth of Virginia. Any legal action arising from this Agreement shall be brought in the courts of Henrico County or the City of Richmond, Virginia.</li>
+
+  <li><strong>Entire Agreement:</strong> This Contract, including any attached Change Orders or addenda, constitutes the entire agreement between the parties. No oral representations or prior agreements are binding unless incorporated herein in writing.</li>
+
+  <li><strong>Severability:</strong> If any provision of this Agreement is found to be unenforceable, the remaining provisions shall remain in full force and effect.</li>
+</ol>
+
+<!-- 3-DAY RIGHT TO CANCEL -->
+<h3>7. Right to Cancel — Virginia Consumer Protection Notice</h3>
+<div class="notice-box">
+  <strong>NOTICE OF RIGHT TO CANCEL (Required by Virginia Law):</strong> You, the Client, may cancel this contract without penalty or obligation within <strong>three (3) business days</strong> from the date of signing. To cancel, you must provide written notice to G &amp; W Contracting Services LLC at the address or email listed above. This right to cancel does not apply if you have requested that work begin within the three-day period. The 50% deposit is non-refundable once materials have been ordered or work has commenced.
+</div>
+
+<!-- ADDITIONAL NOTES -->
+<h3>8. Additional Notes / Special Conditions</h3>
+<div style="border: 1px solid var(--border); border-radius: 4px; min-height: 80px; padding: 10px; font-size: 9pt; color: #999; font-style: italic;">
+  &nbsp;
+</div>
+
+<!-- SIGNATURE BLOCK -->
+<h3>9. Signatures</h3>
+<p style="font-size:9pt;">By signing below, both parties agree to the terms and conditions of this Contract. Client acknowledges receipt of a copy of this agreement.</p>
+
+<div class="sig-section">
+  <div class="sig-grid">
+    <div class="sig-col">
+      <label>Contractor — G &amp; W Contracting Services LLC</label>
+      <div class="sig-line"></div>
+      <div class="sig-sub"><strong>George Mundin</strong> — Owner / Authorized Representative</div>
+      <br>
+      <div style="display:flex;gap:20px;margin-top:10px;">
+        <div style="flex:1;"><div style="font-size:7.5pt;font-weight:700;text-transform:uppercase;color:#666;margin-bottom:16px;">Date Signed</div><div class="sig-line"></div></div>
+        <div style="flex:1;"><div style="font-size:7.5pt;font-weight:700;text-transform:uppercase;color:#666;margin-bottom:16px;">License #</div><div class="sig-line">2705158454</div></div>
+      </div>
+    </div>
+    <div class="sig-col">
+      <label>Client / Property Owner</label>
+      <div class="sig-line"></div>
+      <div class="sig-sub">Printed Name: ________________________________</div>
+      <br>
+      <div style="display:flex;gap:20px;margin-top:10px;">
+        <div style="flex:1;"><div style="font-size:7.5pt;font-weight:700;text-transform:uppercase;color:#666;margin-bottom:16px;">Date Signed</div><div class="sig-line"></div></div>
+        <div style="flex:1;"><div style="font-size:7.5pt;font-weight:700;text-transform:uppercase;color:#666;margin-bottom:16px;">Phone</div><div class="sig-line"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  G &amp; W Contracting Services LLC &bull; Virginia Class A Contractor License #2705158454 &bull; gwcontractingservices@gmail.com &bull; gwcontractingservices.com<br>
+  <em>This contract is prepared for use by G &amp; W Contracting Services LLC. Consult a Virginia attorney for advice specific to your situation.</em>
+</div>
+
+</body>
+</html>

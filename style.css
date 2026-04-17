@@ -7,9 +7,9 @@
   --dark: #1a1a1a;
   --charcoal: #2c2c2c;
   --stone: #3d3d3d;
-  --accent: #b5451b;
-  --accent-light: #d4552a;
-  --gold: #c9a84c;
+  --accent: #7ab040;
+  --accent-light: #8cc450;
+  --gold: #8fbe60;
   --light: #f5f3ef;
   --white: #ffffff;
   --text-muted: #999999;
@@ -209,6 +209,19 @@ nav {
   max-width: 860px;
 }
 
+.hero-logo-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.hero-logo-hero img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 6px;
+}
+
 .hero-badge {
   display: inline-block;
   background: var(--accent);
@@ -219,6 +232,20 @@ nav {
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 7px 20px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.hero-bitcoin-badge {
+  display: inline-block;
+  background: #f7931a;
+  color: white;
+  font-size: 11px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
   border-radius: 2px;
   margin-bottom: 28px;
 }
@@ -828,6 +855,14 @@ footer {
   letter-spacing: 1px;
   padding: 5px 14px;
   border-radius: 2px;
+}
+
+.footer-payment {
+  color: #f7931a;
+  font-size: 13px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* LIGHTBOX */
