@@ -233,21 +233,34 @@ nav {
   text-transform: uppercase;
   padding: 7px 20px;
   border-radius: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
 }
 
-.hero-bitcoin-badge {
-  display: inline-block;
+.bitcoin-badge {
   background: #f7931a;
-  color: white;
-  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.btc-icon {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.btc-icon-sm {
+  height: 13px;
+  width: 13px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.footer-btc {
+  color: #f7931a;
+  font-size: 12px;
   font-family: 'Arial', sans-serif;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 6px 16px;
-  border-radius: 2px;
-  margin-bottom: 28px;
+  letter-spacing: 1px;
 }
 
 .hero h1 {
@@ -855,14 +868,6 @@ footer {
   letter-spacing: 1px;
   padding: 5px 14px;
   border-radius: 2px;
-}
-
-.footer-payment {
-  color: #f7931a;
-  font-size: 13px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
 /* LIGHTBOX */

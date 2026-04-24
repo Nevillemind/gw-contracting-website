@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G&W Contracting Services LLC - Portfolio Slideshow</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #000;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .slide-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #7ab040;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    z-index: 100;
+  }
+
+  .title-card {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .title-card.active {
+    opacity: 1;
+  }
+
+  .title-card img.logo {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  .title-card h1 {
+    color: #7ab040;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .title-card p {
+    color: #999;
+    font-size: 18px;
+    margin-top: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .title-card .tagline {
+    color: #d4a843;
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide-container" id="slideshow">
+
+  <!-- Title Card -->
+  <div class="title-card active" id="titleCard">
+    <img class="logo" src="images/gw-logo.jpg" alt="G&W Contracting Services">
+    <h1>G&W Contracting Services LLC</h1>
+    <p>Masonry &middot; Concrete &middot; Stonework &middot; Hardscapes</p>
+    <div class="tagline">Built to Last.</div>
+  </div>
+
+</div>
+
+<div class="watermark">G&W Contracting Services LLC &middot; Class A Licensed &middot; Virginia</div>
+
+<script>
+const images = [
+  'images/project-1.jpg',
+  'images/project-2.jpg',
+  'images/project-3.jpg',
+  'images/project-4.jpg',
+  'images/project-5.jpg',
+  'images/project-6.jpg',
+  'images/project-7.jpg',
+  'images/project-8.jpg',
+  'images/project-9.jpg',
+  'images/project-10.jpg',
+  'images/project-11.jpg',
+  'images/project-12.jpg',
+  'images/project-13.jpg',
+  'images/project-14.jpg',
+  'images/project-15.jpg',
+  'images/project-16.jpg',
+  'images/project-17.jpg',
+  'images/project-18.jpg',
+  'images/project-19.jpg',
+  'images/project-20.jpg',
+  'images/project-21.jpg',
+  'images/project-22.jpg',
+  'images/project-23.jpg',
+  'images/project-24.jpg',
+  'images/project-25.jpg',
+  'images/project-26.jpg',
+  'images/project-27.jpg',
+  'images/project-28.jpg',
+  'images/project-29.jpg',
+  'images/project-30.jpg',
+  'images/project-31.jpg',
+  'images/project-32.jpg',
+  'images/stone-fireplace.jpg',
+  'images/stone-chimney.jpg',
+  'images/stone-steps.jpg',
+  'images/hardscape-firepit.jpg',
+  'images/hardscape-pooldeck.jpg',
+  'images/concrete-driveway.jpg',
+  'images/concrete-walkway.jpg',
+  'images/brick-border.jpg',
+  'images/brick-porch.jpg'
+];
+
+const container = document.getElementById('slideshow');
+const titleCard = document.getElementById('titleCard');
+let currentSlide = -1; // -1 = title card
+const DISPLAY_TIME = 4000; // 4 seconds per photo
+const FADE_TIME = 2000; // 2 second fade
+
+function createSlideElement(src) {
+  const div = document.createElement('div');
+  div.className = 'slide';
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = 'G&W Contracting Services Project';
+  div.appendChild(img);
+  container.appendChild(div);
+  return div;
+}
+
+// Preload all slides
+const slides = images.map(src => createSlideElement(src));
+
+function showNext() {
+  // Remove active from current
+  if (currentSlide === -1) {
+    titleCard.classList.remove('active');
+  } else {
+    slides[currentSlide].classList.remove('active');
+  }
+
+  currentSlide++;
+
+  // Loop back after all images
+  if (currentSlide >= slides.length) {
+    currentSlide = -1;
+    titleCard.classList.add('active');
+  } else {
+    slides[currentSlide].classList.add('active');
+  }
+}
+
+// Start the slideshow after a brief pause on the title card
+setInterval(showNext, DISPLAY_TIME);
+</script>
+
+</body>
+</html>
